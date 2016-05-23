@@ -1,0 +1,3 @@
+Something I read in another comment - since *most* years aren't leap years, it makes sense to return early in that case. It'll be more performant (no need to do all those `if` checks when you're going to return `False` anyways and will hopefully make your method more readable.
+
+There's no need to do an `elif` after a `return` line. Either the previous `if` statement was true, in which case the method returned early and never hit your `elif` line. Or it was false, in which case you can move right into your `if` statement.

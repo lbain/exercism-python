@@ -1,0 +1,7 @@
+After looking at a few other solutions I realised we don't actually need to do the check for first and second being unequal lengths. (See [this issue](https://github.com/exercism/exercism.io/issues/1867).) So you can remove that check entirely and it'll still pass all the tests.
+
+As it turns out, [`range` will default to `0`](https://docs.python.org/2/library/functions.html#range) as the first parameter if it is not supplied. So you can simplify that bit to `range(len(dna1))` and leave out the 0 entirely.
+
+Tiny nitpick on the naming - `nucleotide` would actually not be the letter (`A` or `G`) but would instead be the index that the letter would appear in the string. As in `nucleotide = strand1[0]` so a different variable name would be more accurate. However, I agree that this would not change the algorithm at all.
+
+Are you looking for help with this problem? As is, your code will not pass the tests (there are no return statements). Happy to chat about how to move forward with it if you'd like :)

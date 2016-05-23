@@ -1,0 +1,1 @@
+Actually, it doesn't matter if a letter is used more than once - so there's no need to remove "used" letters from the list. Instead, if a letter is not found in the sequence you know the sequence wasn't a pangram, so you can return False, which leads to an early return (yay for saving cycles)!
